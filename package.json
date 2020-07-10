@@ -1,5 +1,5 @@
 {
-  "name": "MYPORT",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,9 @@
     "concat:css": "concat -o css/style.concat.css css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "gulp:images": "gulp optimizeImages",
+    "gulp": "gulp"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,13 @@
   "devDependencies": {
     "autoprefixer": "^9.8.4",
     "concat": "^1.0.3",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1"
   },
